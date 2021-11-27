@@ -1,12 +1,13 @@
 package com.florb.controller;
 
-import javafx.event.ActionEvent;
+import com.florb.EmailManager;
+import com.florb.view.ViewManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TreeView;
 import javafx.scene.web.WebView;
 
-public class MainWindowController {
+public class MainWindowController extends BaseController {
 
     @FXML
     private TableView<?> emailsTableView;
@@ -17,9 +18,19 @@ public class MainWindowController {
     @FXML
     private WebView emailsWebView;
 
+    public MainWindowController(EmailManager emailManager, ViewManager viewManager, String fxmlName) {
+        super(emailManager, viewManager, fxmlName);
+    }
+
     @FXML
     void optionsAction() {
-       //TODO fill with menu code
+        viewManager.showOptionsWindow();
+    }
+
+
+    @FXML
+    void addAccountAction() {
+        viewManager.showLoginWindow();
     }
 
 }
