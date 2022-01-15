@@ -19,7 +19,7 @@ public class Launcher extends Application {
     public void start(Stage stage) throws Exception {
 
         ViewManager viewManager = new ViewManager(new EmailManager());
-        viewManager.showOptionsWindow();
+        viewManager.showLoginWindow();
         viewManager.updateStyles();
     }
 }
