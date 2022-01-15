@@ -10,4 +10,6 @@ module EmailClient {
     opens com.florb;
     opens com.florb.view;
     opens com.florb.controller;
+    opens com.florb.model;
+
 }
